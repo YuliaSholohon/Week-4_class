@@ -37,6 +37,7 @@ CMatrix::CMatrix(int Row,int Col)
 	}
 	return;
 };
+//Constructor
 CMatrix::CMatrix(const CMatrix & M){
 	Rows=M.Rows;
 	Cols=M.Cols;
@@ -49,6 +50,7 @@ CMatrix::CMatrix(const CMatrix & M){
 	}
 	return;
 }
+//Destructor
 CMatrix::~CMatrix()
 {
 	for (int j=0;j<Rows;j++){
@@ -57,7 +59,7 @@ CMatrix::~CMatrix()
    delete [] Data;
    
 };
-
+//Get point
 int CMatrix::GetAt(int Row,int Col)
 {
 	if (Row < 0 || Row > Rows)
@@ -67,7 +69,7 @@ int CMatrix::GetAt(int Row,int Col)
 
 	return Data[Row][Col]; 
 };
-
+//Set point
 void CMatrix::SetAt(int Row, int Col,int Dani)
 {
 	if (Row < 0 || Row > Rows)
@@ -78,7 +80,7 @@ void CMatrix::SetAt(int Row, int Col,int Dani)
 	
 
 }
-
+//Show matrix
 void CMatrix::Display()
 {
 	printf("\n Matrix \n");
@@ -91,7 +93,7 @@ void CMatrix::Display()
 	}
 	return;
 }
-
+//multiplication
 int CMatrix::mult()
 {
 	int i;int result=0;
@@ -100,6 +102,7 @@ int CMatrix::mult()
 }
 	return result;
 }
+//Set matrix random values
 void CMatrix::Fill()
 {
 	srand( (unsigned)time( NULL ) );
